@@ -1,0 +1,913 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: "Raleway", "Arial", "sans-serif";
+    box-sizing: border-box;
+    
+}
+
+/* main elements */
+
+body
+
+{
+    max-width: 1300px;
+    margin: auto;
+}
+
+
+a 
+
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+h1
+
+{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+p
+
+{
+    padding-left: 0.5remss;
+    padding-bottom: 1rem;
+    color: rgb(29, 29, 29);
+
+}
+
+h5 /* titre Activités */
+
+{
+    font-size: 1.5rem;
+    padding-left: 0.2rem;
+}
+
+nav
+
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+nav a
+
+{
+    padding: 2.2rem;
+    border-top:3px solid transparent ;
+}
+
+nav a:hover
+
+{
+    color: #0065fc;
+    font-weight: 400;
+    border-top: 3px solid #0065fc ;
+}
+
+#logo
+
+{
+    margin-right: auto ;
+    padding: 0 2rem;
+    height: 2.9rem;
+    cursor: pointer;
+}
+
+.menu /* boutons Hebergements Activites top right */
+
+{
+    display: flex;
+}
+
+/* search form fa map, form w/placeholder, Rechercher */
+
+.search-form
+
+{
+    display: flex;
+    margin-bottom: 2.9rem;
+}
+
+.search-form i
+
+{
+    padding: 1rem 1rem;
+    border-radius: 1rem 0rem 0rem 1rem; 
+    background-color: lightgrey;
+    
+}
+.search-form input
+
+{
+    padding-right: 3rem;
+    width: 15rem;
+}
+
+.fas.fa-search
+
+{
+    display: none;
+}
+
+.search-form input::placeholder
+
+{
+    font-weight: bold;
+    font-size: 1rem;
+    color: rgb(189, 187, 187);
+}
+
+.search-form button
+
+{
+    background-color: #0065fc;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 0rem 1rem 1rem 0rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+    
+}
+
+.search-form button:hover
+
+{
+    opacity: 0.8;
+}
+
+/* Search Filters Economique Familial Romantique Animeaux */
+
+.search-filters
+
+{
+   display: flex; 
+   flex-wrap: wrap;
+   align-items: center;
+   gap: 1rem;
+   margin-bottom: 1.8rem; /* between filters and plus de 500.. */
+}
+
+.filters 
+
+{
+    display: flex;
+    border: 2px solid lightgrey;
+    border-radius: 2rem; 
+    cursor: pointer;
+}
+
+.search-filters h1
+
+{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.filters span
+
+{
+    display: inline;
+    font-weight: bold;
+    padding: 0.7rem;
+}
+
+.filters .fas
+
+{
+    color: blue;
+    background-color: #e3edff;
+    padding: 0.8rem;
+    border-radius: 50%;
+    margin: -3px;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* circle info icon + txt */
+
+.results
+
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.8rem;
+}
+
+.results i
+
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: blue;
+    border: 1px solid lightgrey;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+}
+
+/* Hebergement + Populaire */
+
+.container /* Containers holds Hebergement and Populaire */
+
+{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 5rem;
+}
+
+/* hebergement */
+
+.hebergement
+
+{
+    border-radius: 1rem;
+    background-color: #F2F2F2;
+    padding-left: 1rem;
+    justify-content: center;
+    padding-bottom: 4rem;
+}
+
+.hebergement h3
+
+{
+    padding-left: 1.7rem;
+    padding-top: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.hebergement a
+
+{
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
+.hebergement-results
+
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1.3rem;
+    padding: 0.7rem 1rem 1rem 0.2rem;
+    max-width: 850px;
+    cursor: pointer;
+}
+
+
+.hebergement-results div
+
+{
+    margin:0;
+    background-color: #fff;
+    border-radius: 1rem;
+    flex-wrap: wrap;
+    width: 15rem;
+    height: 12.9rem;
+    box-shadow: 0 0 6px rgb(58, 58, 58);
+}
+
+.hebergement-results img
+
+{
+    
+    border-radius: 1rem 1rem 0rem 0rem;
+    padding: 0.5rem;
+    width: 15rem;
+    height: 8rem;
+    object-fit: cover;
+    margin: 0;
+}
+
+.hebergement-results h4
+
+{
+    font-weight: bold;
+    height: 0rem;
+    padding-left: 0.4rem;
+    padding-bottom: 0.4rem;
+    margin: 0;
+}
+
+.hebergement-results p
+
+{
+    margin-bottom: 0rem;
+    padding-left: 0.4rem;
+    padding-bottom: 0.3rem;
+    margin-left: 0rem;
+    color: #000;
+}
+
+.hebergement-results ul  /* star alignment */
+
+{
+	display: inline-flex;
+	list-style: none;
+    padding-left: 0.4rem;
+    margin: 0;
+}
+
+.fas[data-active=true] /* blue/gray star colors */
+
+{
+	color: #0065FC;
+}
+
+.fas[data-active=false]
+
+{
+    color: #d4d1d1;
+}
+
+/* populaire */
+
+.populaire /* main populaire space */
+
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 1rem;
+    background-color: #F2F2F2;
+    padding-bottom: 1rem;
+    gap: 1rem;
+    padding-top: 0.5rem;
+}
+
+.populaire h3
+
+
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1rem;
+    padding-left: 2.2rem;
+    padding-top: -1rem;
+    margin-top: 1rem;
+}
+
+.populaire div
+
+{
+    width: 100%;
+}
+
+.populaire-card
+
+{
+    display: flex;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    height: 10.1rem;
+}
+
+.populaire-card-bleu-blanc
+
+{
+    display: flex;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    height: 8.1rem;
+}
+
+.populaire-card-bleu-blanc img
+
+{
+    height: 8rem;
+    width: 12rem;
+    border-radius: 1rem 0rem 0rem 1rem;
+    padding: 0.3rem;
+    background-color: #fff;
+    object-fit: cover;
+    box-shadow: 0 0 6px rgb(55, 55, 55);
+    cursor: pointer;
+}
+
+.populaire-text-bleu-blanc
+
+{
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 0rem 1rem 1rem 0rem;
+    padding-bottom: 0.4rem;
+    width: 15rem;
+    box-shadow: 0 0 6px rgb(55, 55, 55);
+    cursor: pointer;
+}
+
+.populaire-card-bleu-blanc h4
+
+{
+    flex-direction: column;
+    padding-left: 1rem;
+    margin-top: 0.3rem;
+    padding-bottom: 1.2rem;
+    height: 1rem;
+}
+
+.populaire-card-bleu-blanc p
+
+{
+    padding-left: 1rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    margin-top: 0rem;
+    padding-bottom: 0.1rem;
+    color: #000;
+    height: 2.4rem;
+}
+
+.populaire-card img
+
+{
+    height: 8rem;
+    width: 8rem;
+    border-radius: 1rem 0rem 0rem 1rem;
+    padding: 0.3rem;
+    background-color: #fff;
+    object-fit: cover;
+    box-shadow: 0 0 6px rgb(55, 55, 55);
+    cursor: pointer;
+}
+
+.populaire-text
+
+{
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 0rem 1rem 1rem 0rem;
+    padding-bottom: 0.4rem;
+    width: 10rem;
+    height: 8rem;
+    box-shadow: 0 0 6px rgb(55, 55, 55);
+    cursor: pointer;
+}
+
+.populaire ul  /* star alignment */
+
+{
+	display: inline-flex;
+	list-style: none;
+    padding-left: 0.9rem;
+    margin: 0;
+}
+
+.populaire-card h4
+
+{
+    flex-direction: column;
+    padding-left: 1rem;
+    margin-top: 0.3rem;
+    padding-bottom: 1.2rem;
+    height: 1rem;
+}
+
+.populaire-card p
+
+{
+    padding-left: 1rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    margin-top: 0rem;
+    padding-bottom: 0.1rem;
+    color: #000;
+    height: 2.4rem;
+}
+
+.stars 
+
+{
+    margin: 0;
+}
+
+/* Activites Marseille */
+
+.activites
+
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 20rem));
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 2.5rem;
+    margin-bottom: 20vh;
+    justify-content: center;
+    width: 100;
+    
+}
+
+.activites > *
+
+{
+    /*border: 1px solid blue;*/
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 8px
+}
+
+.port
+
+{
+    grid-row: 1/ -1;
+    background-image: url(../images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
+    cursor: pointer;
+    background-size: cover;
+    display: flex;
+    text-align: right;
+}
+
+.port h3
+
+{
+    background-color: #fff;
+    border-radius: 0 0 1rem 1rem;
+    margin-top: auto;
+    margin-bottom: 0 ;
+    width: 100%;
+    padding: 1rem;
+    text-align: start;
+}
+
+.calanques
+
+{
+    grid-column: 3/ 4;
+    grid-row: 1 / -1;
+    background-image: url(../images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
+    background-size: cover;
+    display: flex;
+    height: 31rem;
+    cursor: pointer;
+}
+
+.calanques h3
+
+{
+    background-color: #fff;
+    border-radius: 0 0 1rem 1rem;
+    margin-top: auto;
+    margin-bottom: 0 ;
+    width: 100%;
+    padding: 1rem;
+    text-align: start;
+}
+
+.pomegues
+
+{
+    grid-row: 1 /span 3;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    background-image: url(../images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
+    cursor: pointer;
+}
+
+.pomegues h3
+
+{
+    background-color: #fff;
+    border-radius: 0 0 1rem 1rem;
+    margin-top: auto;
+    margin-bottom: 0 ;
+    width: 100%;
+    padding: 1rem;
+    text-align: start;
+}
+
+.longchamp
+
+{
+    cursor: pointer;
+    grid-row:3/-1;
+    grid-column: 4 /-1;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    background-image: url(../images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
+}
+
+.longchamp h3
+
+{
+    background-color: #fff;
+    border-radius: 0 0 1rem 1rem;
+    margin-top: auto;
+    margin-bottom: 0 ;
+    width: 100%;
+    padding: 1rem;
+    text-align: start;
+}
+
+.frioul
+
+{
+    grid-column: 2 / 3;
+    grid-row: 4 / -1;
+    background-image: url(../images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.frioul h3
+
+{
+    background-color: #fff;
+    margin-top: 7.6rem;
+    border-radius: 0 0 1rem 1rem;
+    margin-bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    text-align: start;
+}
+
+.garde
+{
+    grid-column: 4/-1;
+    grid-row: 1/3;
+    background-image: url(../images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.garde h3
+
+{
+    background-color: #fff;
+    border-radius: 0 0 1rem 1rem;
+    margin-top:7.6rem;
+    margin-bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    text-align: start;
+}
+
+/*footer area */
+
+footer
+
+{
+    background-color: #ece8ee;
+    width: 100%;
+	display:flex;
+}
+
+.footer-wrapper 
+
+{
+    display: flex;
+    margin: 10px;
+    padding: 0 1rem;
+}
+
+.footer-column /*Whole column itself*/
+
+{
+	padding: 2rem 2rem;
+	text-align: start;	
+}
+
+.footer ul /* UL itself */
+
+{
+    display: block;
+	list-style: none;
+	color:  #8c8c8c ;
+	padding: 0;
+}
+
+.footer ul li /* LI itself*/
+
+{
+    margin: 0.8rem 0;
+}
+    
+
+@media (max-width: 800px) 
+
+{
+    .menu
+    
+    {
+        /*border: 2px solid blue;*/
+        order: 1;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .menu a 
+
+    {
+        width: 50%; /* activites + hebergemnts */
+        border-bottom: 2px solid lightgrey;
+    }
+
+    
+    .menu a:hover 
+
+    {
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid #0065fc;
+    }
+
+    .search-filters
+
+    {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    
+    .search-text
+
+    {
+        display: none;
+    }
+
+    
+
+    .fas.fa-search
+
+    {
+
+        display: inline;
+        background-color: inherit;
+        
+    }
+
+    .container
+
+    {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        gap: 1.4rem;
+    }
+    
+    .hebergement
+
+    {
+        
+        flex-direction: column;
+    }
+
+    .hebergement h3
+
+    {
+        text-align: center;
+        margin-right: 2.6rem;
+        
+    }
+    
+    .footer
+    {
+        flex-direction: column;
+    }
+
+    
+    .footerWrapper {
+        flex-direction: row;
+    }
+
+    .populaire
+    {
+        width: 100%;
+    }
+
+    .populaire-card-bleu-blanc img 
+
+    {
+        width: 10rem;
+    }
+
+    .activites
+
+    {
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width:500px) /* magnifier icon in smaller screens */
+
+{
+
+    
+    .fas.fa-search
+
+    {
+        display: inline;
+        background-color: inherit;
+    }
+    
+    
+}
+
+@media (max-width: 1220px) 
+
+{
+    .container
+    {
+        flex-wrap: wrap-reverse;
+    }
+
+    .hebergement
+
+    {
+         width: 100%;
+         display: flex;
+         flex-wrap: wrap;
+    }
+
+    .hebergement a 
+
+    {
+        display: none
+    }
+    
+
+    .hebergement h3
+
+    {
+        text-align: center;
+    }
+
+
+    .populaire
+
+    {
+        display: flex;
+       width: 100%;
+        
+    }
+
+    .populaire-card-bleu-blanc img 
+
+    {
+        width: 9rem;
+    }
+
+    .frioul h3 
+
+    {
+        margin-top: 9.8rem;
+        margin-bottom: 0rem;
+    }
+
+    .garde h3 
+
+    {
+        margin-top: 9.8rem;
+        margin-bottom: 0rem;
+    }
+}
+
+@media (max-width: 1500px)
+
+{
+    .activites > *
+    {
+        grid-column:span 1;
+        grid-template-rows: repeat(auto-fit, minmax(10rem, 20rem));
+        grid-row:span 1;
+        grid-auto-rows: minmax(10rem, auto);
+        
+        height: 13rem;
+    }
+
+    .frioul h3 
+
+    {
+        margin-top: 9.8rem;
+        margin-bottom: 0rem;
+    }
+
+    .garde h3 
+
+    {
+        margin-top: 9.8rem;
+        margin-bottom: 0rem;
+    }
+} 
